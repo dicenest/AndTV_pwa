@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+    <path android:fillColor="#1A202C"
+        android:pathData="M0,0h320v180h-320z"/>
+    <!-- dartboard rings -->
+    <path android:fillColor="#E53E3E"
+        android:pathData="M160,90m-60,0a60,60 0 1,0 120,0a60,60 0 1,0 -120,0"/>
+    <path android:fillColor="#1A202C"
+        android:pathData="M160,90m-45,0a45,45 0 1,0 90,0a45,45 0 1,0 -90,0"/>
+    <path android:fillColor="#48BB78"
+        android:pathData="M160,90m-30,0a30,30 0 1,0 60,0a30,30 0 1,0 -60,0"/>
+    <path android:fillColor="#1A202C"
+        android:pathData="M160,90m-15,0a15,15 0 1,0 30,0a15,15 0 1,0 -30,0"/>
+    <path android:fillColor="#E53E3E"
+        android:pathData="M160,90m-6,0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0"/>
+</vector>
