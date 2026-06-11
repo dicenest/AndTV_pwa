@@ -35,11 +35,13 @@ In text fields: left/right move the caret, up/down leave the field and resume na
 
 ## Building
 
+Only needed if you want to build from source — otherwise just grab the APK from the [Releases page](../../releases/latest).
+
 Requirements: [Android Studio](https://developer.android.com/studio) (ships with JDK 17 and the Android SDK). The Gradle wrapper is included.
 
 ```bash
-git clone https://github.com/<you>/autodarts-tv.git
-cd autodarts-tv
+git clone https://github.com/TheJim03/Autodarts-TV.git
+cd Autodarts-TV
 ./gradlew assembleDebug        # Windows: .\gradlew.bat assembleDebug
 ```
 
@@ -90,17 +92,6 @@ A `MutationObserver` re-picks a highlight when the current element disappears (r
 - **Logged out after restart** — make sure you didn't clear the app's data; the session lives in the WebView's cookies/localStorage
 - **An element can't be reached** — toggle cursor mode with MENU as a workaround, then please open an issue with a screenshot so the selector/search can be improved
 - **Gradle sync fails** — usually a proxy/VPN blocking `services.gradle.org` or `dl.google.com`, or an outdated Android Studio (AGP 8.5 needs a recent version)
-
-## Releasing (maintainers)
-
-Releases are built and published automatically by [GitHub Actions](.github/workflows/release.yml). Pushing a tag like `v1.0.1` builds a signed APK and attaches it to a GitHub Release:
-
-```bash
-git tag v1.0.1
-git push origin v1.0.1
-```
-
-One-time setup: create a keystore (`keytool -genkeypair -v -keystore release.keystore -alias autodarts-tv -keyalg RSA -keysize 2048 -validity 10000`), then add it to the repository secrets as `KEYSTORE_BASE64` (base64-encoded) along with `KEYSTORE_PASSWORD`, `KEY_ALIAS` and `KEY_PASSWORD`. Keep the keystore safe and never commit it — all releases must be signed with the same key, otherwise users have to uninstall before updating. Remember to bump `versionCode`/`versionName` in `app/build.gradle.kts` before tagging.
 
 ## Disclaimer
 
