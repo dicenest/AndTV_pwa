@@ -17,7 +17,7 @@ class MainActivity : Activity() {
     companion object {
         // Change this if you want to land directly on your board page,
         // e.g. "https://play.autodarts.io/boards/<your-board-id>/follow"
-        const val START_URL = "https://play.autodarts.io"
+        const val START_URL = "https://tv.stik.dev"
     }
 
     private lateinit var cursorLayout: CursorLayout
